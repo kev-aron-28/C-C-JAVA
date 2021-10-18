@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.vue": "vue",
+        "stdio.h": "c"
+    },
+    "git.ignoreLimitWarning": true,
+    "C_Cpp.errorSquiggles": "Enabled"
+}
