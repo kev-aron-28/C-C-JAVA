@@ -2,16 +2,16 @@
 
 int main(){
     
-    // int edad = 18;
-    // int edad2 = 19;
-    // int *p;
-    // int *a;
-    // int *k;
-    // p = &edad;
-    // *a = &edad2;
-    // printf("Sin *: %p", p);
-    // printf("\nCon *: %p", a);
-    // printf("\n Indereccionar: %d", *p);
+    int edad = 18;
+    int edad2 = 19;
+    int *p;
+    int *a;
+    int *k;
+    p = &edad;
+    *a = &edad2;
+    printf("Sin *: %p", p);
+    printf("\nCon *: %p", a);
+    printf("\n Indereccionar: %d", *p);
     // int n = 12;
     // int *a;
     // a = &n;

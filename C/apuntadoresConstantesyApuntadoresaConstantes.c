@@ -15,6 +15,7 @@ int main(){
     printf("%d", *p1);
     // p1 = &y; Esto no se puede 
 
+
     // Apuntadores a constantes
 
     const int num = 1;

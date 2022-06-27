@@ -13,7 +13,7 @@ typedef struct {
 } PERSONA;
 
 void entrada(PERSONA* p);
-char* mes(short n);
+char* mes_asci(short n);
 
 int main(){
    
@@ -34,7 +34,7 @@ int main(){
         printf("Otro registro?: "); scanf("%c%*c", &r);
 
     }
-    fclose(pf)
+    fclose(pf);
     return 0;
 }
 
@@ -48,5 +48,19 @@ void entrada(PERSONA* p){
     printf("\n %s\n", mes_asci(p->ms));
     strcpy(p->mes, mes_asci(p->ms));
 }
+
+char* mes_asci(short n){
+    static char* mes[12] = {
+        "E", "F", "M" , "A" , "Ma" , "Ju" , "Jul" , "Ag" , "Sep" , "Oct" , "Nov", "Di"
+    };
+
+    if( n >= 1 && n <= 12 ){
+        return mes[n - 1];
+    } else {
+        return "Error mes";
+    } 
+}
+
+
 
 

@@ -19,20 +19,20 @@ int main(){
 
 void selectionSort(int a[], int n ){
 
-    int minIndex, aux;
+    int max, aux;
 
     for(int i = 0; i < n - 1; i++){
-        minIndex = i;
-            for(int j = i + 1; j < n; j++){
-                if(a[j] < a[minIndex]){
-                    minIndex = j;
-                }
+        max = 0;
+        for(int j = 1; j < n - i; j++) { // l < 6
+            if(a[j] > a[max]){ // 5 > 0 
+                max = j; // max = 1
             }
-        aux = a[i];
-        a[i] = a[minIndex];
-        a[minIndex] = aux;
+        }
+        aux = a[n - 1 - i]; //temp = a[5] = temp= 1 
+        a[n - 1 - i] = a[max]; // a[1] = 5  
+        a[max] = aux; // a[1] = 1
     }
-    
+
     showArray(a, n);
 }
 

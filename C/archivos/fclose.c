@@ -12,6 +12,7 @@ int main(){
         printf("Ocurrio un error abriendo el archivo ");
     }
 
+    
     fclose(f);
 
     return 0;
