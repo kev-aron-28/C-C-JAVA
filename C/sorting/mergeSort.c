@@ -11,7 +11,8 @@ int main(int argc, char const *argv[])
     int arr[] = {0,5,4,3,2};
     int temparr[5];
     mergesortutil(arr, temparr, 0, LEN - 1);
-showArray(arr, LEN);
+    showArray(arr, LEN);
+    showArray(temparr, 5);
     return 0;
 }
 
@@ -54,6 +55,7 @@ void mergesort(int arr[], int temparr[], int lowerindex, int middleindex, int up
     for(int i = lowerindex; i <= upperindex; i++) {
         arr[i] = temparr[i];
     }
+
 }
 
 void showArray(int a[], int n ){

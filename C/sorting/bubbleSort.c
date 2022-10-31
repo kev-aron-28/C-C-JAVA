@@ -4,6 +4,7 @@
 
 void bubbleSort(int arrayNumbers[], int n);
 void showArray(int a[], int n);
+void improvedBubbleSort(int arrayNumbers[], int n);
 
 int main(){
 
@@ -15,7 +16,7 @@ int main(){
         scanf("\n %d", &numbers[i]);
     }
 
-    bubbleSort(numbers, 5);
+    improvedBubbleSort(numbers, 5);
     return 0;
 }
 
@@ -32,6 +33,22 @@ void bubbleSort(int arrayNumbers[], int n){
         }
     }
 
+    showArray(arrayNumbers, n);
+}
+
+void improvedBubbleSort(int arrayNumbers[], int n) {
+    int swapped = 1;
+    for(int i = 0; i < n - 1 && swapped; i++) {
+        swapped = 0;
+        for(int j = 0; j < n - i - 1; j++){
+            if(arrayNumbers[j] > arrayNumbers[j + 1]) {
+                int temporal = arrayNumbers[j];
+                arrayNumbers[j] = arrayNumbers[j + 1];
+                arrayNumbers[j + 1] = temporal;
+                swapped = 1;
+            }
+        }
+    }
     showArray(arrayNumbers, n);
 }
 

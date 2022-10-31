@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int binarySearch(int a[], int key, int l, int h);
-
+int binarySearchIterative(int array[], int value, int lower, int high);
 int main(){
 
     int numbers[10]; 
@@ -12,7 +12,7 @@ int main(){
         scanf("\n %d", &numbers[i]);
     }
 
-    int result = binarySearch(numbers, 5, 0, 10);
+    int result = binarySearchIterative(numbers, 5, 0, 10);
 
     printf("\nEl numero se encuentra en la posicion =  %d", result);
 
@@ -39,4 +39,28 @@ int binarySearch(int a[], int key, int l, int h){
     } else {
         return binarySearch(a, key, low,center - 1);
     }
+}
+
+
+int binarySearchIterative(int array[], int value, int lower, int high) {
+    int center;
+    int l,h;
+    l = lower;
+    h = high - 1;
+    while(l <= h) {
+        center = ((l + h) / 2);
+        if(array[center] == value ) {
+            return 1;
+        } 
+
+        if(array[center] < value) {
+            l = center + 1;
+        }
+
+        if(array[center] > value) {
+            h = center - 1;
+        } 
+    }
+
+    return -1;
 }

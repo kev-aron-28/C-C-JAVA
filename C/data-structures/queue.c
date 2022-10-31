@@ -13,7 +13,6 @@ struct Node *bottom = NULL;
 int len = 0;
 
 // Methods
-struct Node* peek();
 void enqueue( int data );
 void dequeue();
 void show();
@@ -23,7 +22,7 @@ int main(){
     enqueue(1);
     enqueue(2);
     enqueue(3);
-    struct Node * s = peek();
+    dequeue();
     show();
 
     return 0;
@@ -38,10 +37,6 @@ void show(){
         current = current->next;
     }
     printf("]");
-}
-
-struct Node* peek(){
-    return bottom;
 }
 
 void dequeue(){

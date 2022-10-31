@@ -25,6 +25,7 @@ int main(){
     push(4);
     push(5);
     push(6);
+    pop();
     show();
     return 0;
 }
@@ -62,7 +63,7 @@ int top_element() {
 void show(){
     struct Node * current = top;
     while(current){
-        printf("\n%d", current->data);
+        printf("\n|%d|", current->data);
         current = current->next;
     }
 }
